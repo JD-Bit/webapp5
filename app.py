@@ -31,7 +31,7 @@ page2026 = st.Page(
 )
 
 pg = st.navigation(pages=[page2026, page2025, page2024])
-logo_path = "/Users/jd/CS/webapp/app3/assets/logo.png"
+logo_path = "/Users/jd/CS/webapp/app/assets/logo.png"
 st.logo(logo_path)
 st.sidebar.text("HI THERE HOTTIE😍😍")
 st.sidebar.image(logo_path, width=200)  # Adjust the width as needed
