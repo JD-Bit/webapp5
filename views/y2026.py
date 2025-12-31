@@ -273,7 +273,7 @@ late-night thoughts, inside jokes,
 </p>
 
 <p>
-We talked on all <b>{days_with_msgs}</b> days.
+We talked on all <b>365</b> days.
 No disappearing acts. No off-season.
 Just us, showing up again and again,
 like a chorus you never skip.
