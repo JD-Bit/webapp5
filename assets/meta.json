@@ -1,0 +1,16 @@
+{
+  "senders": [
+    "Elfie\ud83d\udc95",
+    "Jiade"
+  ],
+  "num_messages": 132457,
+  "min_dt": "2025-01-01 00:00:07",
+  "max_dt": "2025-12-31 22:32:27",
+  "relationship_as_dataset": {
+    "messages": 132457,
+    "words": 495030,
+    "avg_words_per_message": 3.74,
+    "pages_equivalent":  1320.08,
+    "novels_equivalent": 110
+  }
+}
