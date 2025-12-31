@@ -282,7 +282,11 @@ like a chorus you never skip.
 <p>
 And love showed up in the smallest, sweetest ways.
 I told you “I love you” <b>{jiade['love_you']}</b> times,
-and somehow it still never felt like enough. We miss each other too <3!💋
+and somehow it still never felt like enough. 
+</p>
+
+<p>
+We miss each other alot too <3!💋
 <b>{jiade['miss_you']}</b> “I miss you”s from me,
 <b>{elfie['miss_you']}</b> from you!
 Hearts were everywhere, kisses even more,
@@ -296,7 +300,7 @@ It was not loud nor flashy. Just consistent, soft, and always us.
 
 <p>
 If our love story were written like a Taylor Swift discography,
-it would fill <b>{rel['pages_equivalent']}</b> lyric pages —
+it would fill <b>{rel['pages_equivalent']}</b> lyric pages, 
 basically <b>{rel['novels_equivalent']}</b> full albums worth of words,
 feelings, and moments we’ll always come back to.
 </p>
