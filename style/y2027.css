@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap');
+
+.stApp {
+    background-color: #000000 !important;
+    color: #fafafa;
+}
+
+.romantic-header {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2rem, 6.4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff !important;
+    letter-spacing: 0.4px;
+    line-height: 1.15;
+    margin: 0.6rem auto 0.2rem;
+    padding: 0 0.6rem;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.25),
+        0 0 16px rgba(255, 255, 255, 0.15);
+}
+
+.ny27-top {
+    max-width: 920px;
+    margin: 0 auto 0.4rem;
+}
+
+.ny27-heart {
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1;
+    margin: 0.15rem 0 0.35rem;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.28));
+}
+
+.ny27-rule {
+    width: 72px;
+    height: 1px;
+    margin: 0.15rem auto 0.85rem;
+    background: var(--accent, #f4efe6);
+    opacity: 0.75;
+}
+
+.ny27-intro {
+    max-width: 38rem;
+    margin: 0 auto 0.3rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    padding: 0 0.4rem;
+}
+
+.ny27-banner {
+    margin: 0 auto 0.7rem;
+    text-align: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent, #f4efe6) !important;
+}
+
+.ny27-wrap {
+    max-width: 920px;
+    margin: 0.4rem auto 0.2rem;
+}
+
+.ny27-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: stretch;
+}
+
+@media (min-width: 640px) {
+    .ny27-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+}
+
+.ny27-card,
+.ny27-card:hover,
+.ny27-card:visited,
+.ny27-card:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.ny27-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    height: 100%;
+    min-height: 100%;
+    padding: 16px 14px 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(244, 239, 230, 0.22);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015));
+    box-sizing: border-box;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.ny27-card.is-sealed {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.ny27-card.is-ready,
+.ny27-card.is-open {
+    cursor: pointer;
+    border-color: rgba(244, 239, 230, 0.48);
+}
+
+.ny27-card.is-open {
+    border-color: var(--accent, #f4efe6);
+    box-shadow: inset 0 0 0 1px var(--accent, #f4efe6);
+}
+
+.ny27-card:focus-visible {
+    outline: 2px solid var(--accent, #f4efe6);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    a.ny27-card.is-ready:hover,
+    a.ny27-card.is-open:hover {
+        transform: translateY(-3px);
+        border-color: rgba(244, 239, 230, 0.8);
+    }
+}
+
+.ny27-mini {
+    width: 72px;
+    height: 50px;
+    flex: 0 0 auto;
+    position: relative;
+    background: linear-gradient(#fbf6ee, #e7d8c0);
+    border-radius: 3px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28);
+}
+
+.ny27-mini-flap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-left: 36px solid transparent;
+    border-right: 36px solid transparent;
+    border-top: 28px solid #e6d3b6;
+}
+
+.ny27-mini-seal {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    color: #3d2b1f;
+    background: radial-gradient(circle at 35% 30%, #fff 0%, #e7c8a0 42%, #a97848 100%);
+    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.18), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.is-sealed .ny27-mini-seal {
+    font-size: 13px;
+}
+
+.is-ready .ny27-mini-seal,
+.is-open .ny27-mini-seal {
+    background: radial-gradient(circle at 35% 30%, #fff 0%, var(--accent, #f4efe6) 46%, #cfc6b8 100%);
+}
+
+.ny27-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    flex: 1;
+}
+
+.ny27-month {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    color: #ffffff !important;
+}
+
+.ny27-label {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.78) !important;
+    overflow-wrap: anywhere;
+}
+
+.ny27-status {
+    margin-top: auto;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62) !important;
+}
+
+.ny27-when {
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.ny27-open {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    min-width: 76px;
+    margin-top: 6px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: var(--accent, #f4efe6);
+    color: #1c1612 !important;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 639px) {
+    .ny27-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        min-height: 0;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .ny27-card-text {
+        align-items: flex-start;
+    }
+
+    .ny27-status {
+        margin-top: 4px;
+    }
+
+    .ny27-month {
+        font-size: 1.2rem;
+    }
+}
+
+.ny27-reveal {
+    max-width: 680px;
+    margin: 0.2rem auto 1.15rem;
+}
+
+.ny27-stage {
+    position: relative;
+    z-index: 2;
+    width: 148px;
+    height: 108px;
+    margin: 0 auto -8px;
+}
+
+.ny27-big {
+    position: relative;
+    width: 148px;
+    height: 100px;
+    background: linear-gradient(#fbf6ee, #e7d8c0);
+    border-radius: 4px;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.38);
+}
+
+.ny27-big-flap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-left: 74px solid transparent;
+    border-right: 74px solid transparent;
+    border-top: 56px solid #e6d3b6;
+    transform-origin: top center;
+}
+
+.ny27-big-seal {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 64%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: radial-gradient(circle at 35% 30%, #fff, var(--accent, #f4efe6) 48%, #c9bfb0);
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.ny27-paper,
+.ny27-paper * {
+    color: #241c17 !important;
+}
+
+.ny27-paper {
+    position: relative;
+    z-index: 1;
+    margin: -18px auto 0;
+    background:
+        radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.75), transparent 34%),
+        #f6f0e6;
+    padding: 1.45rem 1.4rem 1.55rem;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
+}
+
+.ny27-kicker {
+    margin: 0;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8a7158 !important;
+}
+
+.ny27-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.55rem, 4vw, 2.05rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0.2rem 0 0.35rem;
+}
+
+.ny27-paper-label {
+    margin: 0 0 1rem;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-style: italic;
+    color: #6d5a48 !important;
+}
+
+.ny27-body p {
+    margin: 0 0 0.9rem;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.ny27-body p:last-child {
+    margin-bottom: 0;
+}
+
+.ny27-animate .ny27-big {
+    animation: ny27-env 0.9s ease both;
+}
+
+.ny27-animate .ny27-big-seal {
+    animation: ny27-pop 0.7s ease 0.05s both;
+}
+
+.ny27-animate .ny27-paper {
+    animation: ny27-rise 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+@keyframes ny27-env {
+    0% { transform: translateY(10px) scale(0.96); }
+    40% { transform: translateY(0) scale(1.04); }
+    100% { transform: none; }
+}
+
+@keyframes ny27-pop {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    55% { opacity: 1; transform: translate(-50%, -62%) scale(1.18); }
+    100% { opacity: 0; transform: translate(-50%, -90%) scale(1.4); }
+}
+
+@keyframes ny27-rise {
+    from { opacity: 0; transform: translateY(34px); }
+    to { opacity: 1; transform: none; }
+}
+
+.ny27-seal-again,
+.ny27-seal-again:hover,
+.ny27-seal-again:visited {
+    display: block;
+    text-align: center;
+    margin: 0.85rem auto 0.1rem;
+    color: rgba(255, 255, 255, 0.72) !important;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ny27-dare {
+    max-width: 920px;
+    margin: 1.5rem auto 0.2rem;
+}
+
+.ny27-korea {
+    max-width: 920px;
+    margin: 0.2rem auto 1.4rem;
+    text-align: center;
+}
+
+.ny27-korea-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.8rem, 5vw, 2.45rem);
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0.15rem 0 0.2rem;
+}
+
+.ny27-korea-dates {
+    margin: 0 0 0.85rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.66) !important;
+}
+
+.ny27-korea-note,
+.ny27-korea-warn {
+    max-width: 36rem;
+    margin: 0 auto 0.9rem;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 1.6;
+}
+
+.ny27-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px 16px;
+    padding: 0.4rem 0 0.6rem;
+}
+
+.ny27-polaroid {
+    width: min(46%, 190px);
+    margin: 0;
+    position: relative;
+    background: #f7f1e6;
+    padding: 8px 8px 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+    transform: rotate(var(--tilt));
+}
+
+.ny27-polaroid,
+.ny27-polaroid * {
+    color: #2c241c !important;
+}
+
+@media (min-width: 640px) {
+    .ny27-polaroid {
+        width: 180px;
+    }
+}
+
+.ny27-polaroid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    background: #e7e0d4;
+}
+
+.ny27-polaroid figcaption {
+    font-family: "Caveat", cursive;
+    font-size: 1.2rem;
+    line-height: 1.15;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.ny27-polaroid.no-cap {
+    padding-bottom: 16px;
+}
+
+.ny27-polaroid::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 46px;
+    height: 14px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.ny27-empty {
+    padding: 0.4rem 0 0.8rem;
+}
+
+.ny27-empty-frame {
+    width: 150px;
+    height: 176px;
+    margin: 0 auto 0.85rem;
+    background:
+        linear-gradient(#e7e0d4, #e7e0d4) center 12px / calc(100% - 24px) 112px no-repeat,
+        #f7f1e6;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    transform: rotate(-2deg);
+}
+
+.ny27-empty p {
+    margin: 0;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+div[data-testid="stImage"] {
+    max-width: 460px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+div[data-testid="stImage"] img {
+    border: 8px solid #f7f1e6;
+    border-bottom-width: 28px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 639px) {
+    .ny27-paper {
+        padding: 1.15rem 1rem 1.25rem;
+        margin-top: -10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ny27-animate .ny27-paper,
+    .ny27-animate .ny27-big,
+    .ny27-animate .ny27-big-seal,
+    div[data-testid="stImage"] {
+        animation: none !important;
+    }
+
+    .ny27-card {
+        transition: none;
+    }
+
+    a.ny27-card:hover {
+        transform: none;
+    }
+
+    .ny27-polaroid,
+    .ny27-empty-frame {
+        transform: none;
+    }
+}

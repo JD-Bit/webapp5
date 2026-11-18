@@ -1,0 +1,7 @@
+# Optional captions for the pictures in this folder.
+# The key is the file name. Pictures without a line still show up.
+# The wall sorts names A to Z, so 01-arrival.jpg, 02-night.jpg keeps order.
+# Add photos by dropping files here (jpg, jpeg, png, webp, gif). No code changes.
+#
+# "01-arrival.jpg" = "PLACEHOLDER caption"
+# "02-night.jpg" = "PLACEHOLDER caption"
